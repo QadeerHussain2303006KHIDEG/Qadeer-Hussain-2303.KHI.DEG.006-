@@ -1,0 +1,29 @@
+minikube start
+kubectl get all
+kubectl apply -f mongo-configmap.yaml
+kubectl apply -f mongo-express-deployment.yaml
+kubectl apply -f mongo-express-service.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongodb-deployment.yaml
+kubectl apply -f mongodb-service.yaml
+kubectl get deployments
+kubectl get services
+kubectl get pods
+kubectl describe service mongo-express-service
+kubectl get pods
+kubectl logs NAME
+kubectl get services
+minikube service mongo-express-service          #run the service
+
+kubectl exec -it mongo-deployment-85bbdc6549 -cdfxd -- bash 
+
+mongosh -u $MONGO_INITDB_ROOT_USERNAME -p $MONGO_INITDB_ROOT_PASSWORD
+
+open the mongo env in terminal and run these commands:
+		use qadeer_DB
+		show collections
+		db.qadeer.find().pretty()
+		
+
+
+
